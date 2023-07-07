@@ -1,0 +1,48 @@
+<!-- <app-navbar></app-navbar> -->
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row" style="margin-top: 30px; border-radius:30px">
+            <div class="col-md-6 offset-md-3">
+                <mat-card style="background-color:#FFFFFF;">
+                    <mat-card-content>
+                        <h1 class="text-center">Add Movie</h1>
+                        <form (ngSubmit)="addMovie()">
+                            <!-- username -->
+                            <mat-form-field class="full-width" appearance="outline">
+                                <mat-label>Enter Movie Name</mat-label>
+                                <input 
+                                required
+                                [(ngModel)] ="movie.movieName"
+                                name="movieName"
+                                matInput placeholder="Enter movie Here">
+                            </mat-form-field><br>
+                            <mat-form-field class="full-width" appearance="outline">
+                                <mat-label>Enter Theatre Name</mat-label>
+                                <input 
+                                required
+                                [(ngModel)] ="movie.theatreName"
+                                name="theatreName"
+                                matInput placeholder="Enter Theatre Name">
+                            </mat-form-field><br>
+                            <mat-form-field class="full-width" appearance="outline">
+                                <mat-label>Enter noOfTickets</mat-label>
+                                <input type="number"
+                                required
+                                [(ngModel)] ="movie.noOfTicketsAvailable"
+                                name="noOfTickets"
+                                matInput placeholder="Enter noOfTickets">
+                            </mat-form-field><br>
+                            <mat-form-field class="full-width" appearance="outline">
+                                <mat-label>Select TicketStatus</mat-label>
+                                <mat-select style="margin: 1%;"placeholder="Options" [(value)]="ticketsStatus">
+                                  <mat-option   value="SOLD OUT">SOLD OUT</mat-option>
+                                  <mat-option   value="BOOK ASAP">BOOK ASAP</mat-option>
+                                </mat-select>
+                            </mat-form-field><br>
+                            <div class="container text-center">
+                                <button type="submit" style="margin-right: 10px; background-color:#009FBD" mat-raised-button >Add Movie</button>
+                            </div>
+                        </form>
+                    </mat-card-content>
+                </mat-card>
+

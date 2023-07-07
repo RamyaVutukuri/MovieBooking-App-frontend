@@ -1,0 +1,15 @@
+<app-navbar></app-navbar>
+<br>
+<h1 style="text-align: center;font-family: Gill Sans Extrabold;"><b>Welcome to Movie Booking App</b></h1>
+<div class="bg">
+    <div class="bootstrap-wrapper">
+        <div class="container">
+            <div style="margin-top: 20px;">
+                <div style="justify-content: center;text-align:right">
+                    <button *ngIf="!loginService.adminLoggedIn() && !loginService.userLoggedIn()" style="margin-top:60px;margin-right:30px;background-color:aliceblue" (click)='register()' mat-raised-button>Register</button>
+                    <button *ngIf="!loginService.adminLoggedIn() && !loginService.userLoggedIn()" style="margin-top:60px;margin-right:30px;background-color:aliceblue" (click)='login()' mat-raised-button>Login</button>  
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
